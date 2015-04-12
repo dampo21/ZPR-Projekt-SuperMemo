@@ -50,10 +50,10 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(210, 150, 75, 23));
+        pushButton->setGeometry(QRect(220, 110, 75, 23));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(360, 120, 47, 13));
+        label->setGeometry(QRect(310, 70, 47, 13));
         listWidget_sets = new QListWidget(centralWidget);
         listWidget_sets->setObjectName(QStringLiteral("listWidget_sets"));
         listWidget_sets->setGeometry(QRect(10, 20, 171, 192));
