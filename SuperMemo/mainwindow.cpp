@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "QtSql/QtSql"
 #include <QMessageBox>
+#include "learnwindow.h"
 
 using namespace std;
 
@@ -60,5 +61,6 @@ void MainWindow::on_actionZamknij_triggered()
 
 void MainWindow::on_learnButton_clicked()
 {
-
+    learnwindow
+   // lw.show();
 }
