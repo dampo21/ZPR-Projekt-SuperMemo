@@ -20,5 +20,5 @@ void learnwindow::on_checkButton_clicked()
 
 void learnwindow::on_correctlyButton_clicked()
 {
-    learnButton.Show();
+   // learnButton.Show();
 }
