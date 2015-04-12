@@ -60,7 +60,7 @@ public:
         listWidget_sets->setGeometry(QRect(10, 20, 171, 192));
         learnButton = new QPushButton(centralWidget);
         learnButton->setObjectName(QStringLiteral("learnButton"));
-        learnButton->setGeometry(QRect(210, 90, 75, 23));
+        learnButton->setGeometry(QRect(210, 30, 75, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
