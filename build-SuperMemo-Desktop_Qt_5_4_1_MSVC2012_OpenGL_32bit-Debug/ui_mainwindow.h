@@ -34,6 +34,7 @@ public:
     QPushButton *pushButton;
     QLabel *label;
     QListWidget *listWidget_sets;
+    QPushButton *learnButton;
     QMenuBar *menuBar;
     QMenu *menuMenu;
     QToolBar *mainToolBar;
@@ -57,6 +58,9 @@ public:
         listWidget_sets = new QListWidget(centralWidget);
         listWidget_sets->setObjectName(QStringLiteral("listWidget_sets"));
         listWidget_sets->setGeometry(QRect(10, 20, 171, 192));
+        learnButton = new QPushButton(centralWidget);
+        learnButton->setObjectName(QStringLiteral("learnButton"));
+        learnButton->setGeometry(QRect(210, 90, 75, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -85,6 +89,7 @@ public:
         actionZamknij->setText(QApplication::translate("MainWindow", "Zamknij", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Logowanie", 0));
         label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        learnButton->setText(QApplication::translate("MainWindow", "Nauka", 0));
         menuMenu->setTitle(QApplication::translate("MainWindow", "Menu", 0));
     } // retranslateUi
 
