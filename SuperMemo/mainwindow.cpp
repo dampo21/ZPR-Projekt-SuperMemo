@@ -57,3 +57,8 @@ void MainWindow::on_actionZamknij_triggered()
 {
   close();
 }
+
+void MainWindow::on_learnButton_clicked()
+{
+
+}

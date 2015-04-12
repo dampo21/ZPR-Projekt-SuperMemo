@@ -20,9 +20,10 @@ private slots:
 
     void on_actionZamknij_triggered();
 
+    void on_learnButton_clicked();
+
 private:
     Ui::MainWindow *ui;
-    std::string dBase;
 };
 
 #endif // MAINWINDOW_H
