@@ -1,3 +1,8 @@
+/**
+ * @file mainwindow.h
+ * @author Damian Pobrotyn , Kamil Rostecki
+ * @brief Definition of the MainWindow Class.
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

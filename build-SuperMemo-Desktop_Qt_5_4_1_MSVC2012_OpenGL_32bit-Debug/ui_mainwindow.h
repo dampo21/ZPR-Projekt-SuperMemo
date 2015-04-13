@@ -31,6 +31,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionZamknij;
+    QAction *actionZmien_uzytkownika;
     QWidget *centralWidget;
     QPushButton *pushButton;
     QSlider *numbeWordsSlider;
@@ -59,14 +60,17 @@ public:
         MainWindow->setAutoFillBackground(false);
         actionZamknij = new QAction(MainWindow);
         actionZamknij->setObjectName(QStringLiteral("actionZamknij"));
+        actionZmien_uzytkownika = new QAction(MainWindow);
+        actionZmien_uzytkownika->setObjectName(QStringLiteral("actionZmien_uzytkownika"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(50, 170, 75, 23));
+        pushButton->setEnabled(false);
+        pushButton->setGeometry(QRect(350, 20, 75, 23));
         numbeWordsSlider = new QSlider(centralWidget);
         numbeWordsSlider->setObjectName(QStringLiteral("numbeWordsSlider"));
-        numbeWordsSlider->setGeometry(QRect(310, 30, 160, 19));
+        numbeWordsSlider->setGeometry(QRect(310, 80, 160, 19));
         numbeWordsSlider->setMouseTracking(false);
         numbeWordsSlider->setAcceptDrops(false);
         numbeWordsSlider->setMinimum(1);
@@ -74,10 +78,10 @@ public:
         numbeWordsSlider->setOrientation(Qt::Horizontal);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(330, 10, 151, 21));
+        label_2->setGeometry(QRect(330, 60, 151, 21));
         numberWordsLabel = new QLabel(centralWidget);
         numberWordsLabel->setObjectName(QStringLiteral("numberWordsLabel"));
-        numberWordsLabel->setGeometry(QRect(380, 50, 47, 13));
+        numberWordsLabel->setGeometry(QRect(380, 100, 47, 13));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(170, 20, 131, 201));
@@ -93,6 +97,7 @@ public:
 
         scheduleButton = new QPushButton(verticalLayoutWidget);
         scheduleButton->setObjectName(QStringLiteral("scheduleButton"));
+        scheduleButton->setEnabled(false);
 
         verticalLayout->addWidget(scheduleButton);
 
@@ -103,6 +108,7 @@ public:
 
         wordsButton = new QPushButton(verticalLayoutWidget);
         wordsButton->setObjectName(QStringLiteral("wordsButton"));
+        wordsButton->setEnabled(false);
 
         verticalLayout->addWidget(wordsButton);
 
@@ -126,6 +132,8 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         menuBar->addAction(menuMenu->menuAction());
+        menuMenu->addAction(actionZmien_uzytkownika);
+        menuMenu->addSeparator();
         menuMenu->addAction(actionZamknij);
 
         retranslateUi(MainWindow);
@@ -136,6 +144,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         actionZamknij->setText(QApplication::translate("MainWindow", "Zamknij", 0));
+        actionZmien_uzytkownika->setText(QApplication::translate("MainWindow", "Zmien uzytkownika", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Logowanie", 0));
         label_2->setText(QApplication::translate("MainWindow", "Ile s\305\202\303\263wek chcesz si\304\231 uczy\304\207?", 0));
         numberWordsLabel->setText(QApplication::translate("MainWindow", "1", 0));
