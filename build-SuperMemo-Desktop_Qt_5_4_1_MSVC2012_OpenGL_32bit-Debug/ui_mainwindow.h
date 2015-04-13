@@ -52,14 +52,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(502, 272);
+        MainWindow->resize(524, 266);
         actionZamknij = new QAction(MainWindow);
         actionZamknij->setObjectName(QStringLiteral("actionZamknij"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(30, 180, 75, 23));
+        pushButton->setGeometry(QRect(50, 170, 75, 23));
         numbeWordsSlider = new QSlider(centralWidget);
         numbeWordsSlider->setObjectName(QStringLiteral("numbeWordsSlider"));
         numbeWordsSlider->setGeometry(QRect(310, 30, 160, 19));
@@ -110,7 +110,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 502, 21));
+        menuBar->setGeometry(QRect(0, 0, 524, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QStringLiteral("menuMenu"));
         MainWindow->setMenuBar(menuBar);
