@@ -1,6 +1,11 @@
+/**
+ * @file mainwindow.cpp
+ * @author Damian Pobrotyn , Kamil Rostecki
+ * @brief Implementation of the MainWindow Methods.
+ */
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 #include "learnwindow.h"
 #include "addwordwindow.h"
 
@@ -47,6 +52,7 @@ void MainWindow::on_numbeWordsSlider_actionTriggered(int action)
 {
     ui->numberWordsLabel->setText(str.setNum(action));
 }
+
 
 void MainWindow::on_numbeWordsSlider_valueChanged(int value)
 {

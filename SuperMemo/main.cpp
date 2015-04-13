@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @author Damian Pobrotyn , Kamil Rostecki
+ * @brief Function main.
+ */
+
 #include "mainwindow.h"
 #include <QApplication>
 
