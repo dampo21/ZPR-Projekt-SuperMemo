@@ -3,6 +3,7 @@
 #include "QtSql/QtSql"
 #include <QMessageBox>
 #include "learnwindow.h"
+#include "addwordwindow.h"
 
 using namespace std;
 
@@ -64,4 +65,10 @@ void MainWindow::on_learnButton_clicked()
     learnwindow *l = new learnwindow(this);
     l->show();
 
+}
+
+void MainWindow::on_addWordButton_clicked()
+{
+    addwordwindow *aaw = new addwordwindow(this);
+    aaw->show();
 }

@@ -22,6 +22,8 @@ private slots:
 
     void on_learnButton_clicked();
 
+    void on_addWordButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
