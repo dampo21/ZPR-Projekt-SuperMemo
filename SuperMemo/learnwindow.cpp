@@ -12,7 +12,7 @@ learnwindow::learnwindow(QWidget *parent, int number) :
     ui->correctlyButton->hide();
     ui->almostButton->hide();
     ui->incorrectlyButton->hide();
-    ui->angWordLabel->hide();
+    ui->engWordLabel->hide();
     ui->sentenceLabel->hide();
     learnedWordsCounter = 0;
     ui->lcdNumber->display(learnedWordsCounter);
@@ -33,8 +33,8 @@ learnwindow::learnwindow(QWidget *parent, int number) :
                throw exception();
             }
             for(int i=0;query.next();i++){
-                ui->polWordLabel->setText(query.value((1)).toString());
-                ui->angWordLabel->setText(query.value((2)).toString());
+                ui->plWordLabel->setText(query.value((1)).toString());
+                ui->engWordLabel->setText(query.value((2)).toString());
                 ui->synonymLabel->setText(query.value((3)).toString());
                 ui->sentenceLabel->setText(query.value((4)).toString());
             }
@@ -58,7 +58,7 @@ void learnwindow::on_checkButton_clicked()
     ui->correctlyButton->show();
     ui->almostButton->show();
     ui->incorrectlyButton->show();
-    ui->angWordLabel->show();
+    ui->engWordLabel->show();
     ui->sentenceLabel->show();
 }
 
@@ -68,7 +68,7 @@ void learnwindow::on_correctlyButton_clicked()
     ui->correctlyButton->hide();
     ui->almostButton->hide();
     ui->incorrectlyButton->hide();
-    ui->angWordLabel->hide();
+    ui->engWordLabel->hide();
     ui->sentenceLabel->hide();
     learnedWordsCounter++;
     ui->lcdNumber->display(learnedWordsCounter);
@@ -80,7 +80,7 @@ void learnwindow::on_incorrectlyButton_clicked()
     ui->correctlyButton->hide();
     ui->almostButton->hide();
     ui->incorrectlyButton->hide();
-    ui->angWordLabel->hide();
+    ui->engWordLabel->hide();
     ui->sentenceLabel->hide();
 }
 
@@ -90,7 +90,7 @@ void learnwindow::on_almostButton_clicked()
     ui->correctlyButton->hide();
     ui->almostButton->hide();
     ui->incorrectlyButton->hide();
-    ui->angWordLabel->hide();
+    ui->engWordLabel->hide();
     ui->sentenceLabel->hide();
 }
 

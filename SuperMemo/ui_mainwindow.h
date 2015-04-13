@@ -15,7 +15,6 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -34,8 +33,6 @@ public:
     QAction *actionZamknij;
     QWidget *centralWidget;
     QPushButton *pushButton;
-    QLabel *label;
-    QListWidget *listWidget_sets;
     QSlider *numbeWordsSlider;
     QLabel *label_2;
     QLabel *numberWordsLabel;
@@ -55,20 +52,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(476, 361);
+        MainWindow->resize(502, 283);
+        MainWindow->setMinimumSize(QSize(502, 283));
+        MainWindow->setMaximumSize(QSize(502, 283));
+        MainWindow->setWindowTitle(QStringLiteral("Program do nauki"));
+        MainWindow->setAutoFillBackground(false);
         actionZamknij = new QAction(MainWindow);
         actionZamknij->setObjectName(QStringLiteral("actionZamknij"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(350, 150, 75, 23));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(360, 120, 47, 13));
-        listWidget_sets = new QListWidget(centralWidget);
-        listWidget_sets->setObjectName(QStringLiteral("listWidget_sets"));
-        listWidget_sets->setGeometry(QRect(0, 20, 171, 192));
+        pushButton->setGeometry(QRect(50, 170, 75, 23));
         numbeWordsSlider = new QSlider(centralWidget);
         numbeWordsSlider->setObjectName(QStringLiteral("numbeWordsSlider"));
         numbeWordsSlider->setGeometry(QRect(310, 30, 160, 19));
@@ -119,7 +114,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 476, 21));
+        menuBar->setGeometry(QRect(0, 0, 502, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QStringLiteral("menuMenu"));
         MainWindow->setMenuBar(menuBar);
@@ -140,10 +135,8 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Program do nauki", 0));
         actionZamknij->setText(QApplication::translate("MainWindow", "Zamknij", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Logowanie", 0));
-        label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         label_2->setText(QApplication::translate("MainWindow", "Ile s\305\202\303\263wek chcesz si\304\231 uczy\304\207?", 0));
         numberWordsLabel->setText(QApplication::translate("MainWindow", "1", 0));
         learnButton->setText(QApplication::translate("MainWindow", "Nauka", 0));
@@ -152,6 +145,7 @@ public:
         wordsButton->setText(QApplication::translate("MainWindow", "Baza s\305\202\303\263w", 0));
         exitButton->setText(QApplication::translate("MainWindow", "Wyj\305\233cie", 0));
         menuMenu->setTitle(QApplication::translate("MainWindow", "Menu", 0));
+        Q_UNUSED(MainWindow);
     } // retranslateUi
 
 };

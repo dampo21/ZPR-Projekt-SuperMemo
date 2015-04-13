@@ -19,7 +19,6 @@
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,12 +26,6 @@ QT_BEGIN_NAMESPACE
 class Ui_learnwindow
 {
 public:
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
-    QLabel *polWordLabel;
-    QLabel *angWordLabel;
-    QLabel *synonymLabel;
-    QLabel *sentenceLabel;
     QPushButton *checkButton;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *buttonsLayout;
@@ -42,44 +35,26 @@ public:
     QLabel *learnedWordsLabel;
     QLCDNumber *lcdNumber;
     QLabel *newWordsLabel;
+    QLabel *synonymLabel;
+    QLabel *engWordLabel;
+    QLabel *synonymLabel_2;
+    QLabel *plWordLabel;
+    QLabel *sentenceLabel_2;
+    QLabel *engWordLabel_2;
+    QLabel *sentenceLabel;
+    QLabel *plWordLabel_2;
 
     void setupUi(QDialog *learnwindow)
     {
         if (learnwindow->objectName().isEmpty())
             learnwindow->setObjectName(QStringLiteral("learnwindow"));
-        learnwindow->resize(400, 300);
-        verticalLayoutWidget = new QWidget(learnwindow);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(150, 30, 201, 151));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        polWordLabel = new QLabel(verticalLayoutWidget);
-        polWordLabel->setObjectName(QStringLiteral("polWordLabel"));
-
-        verticalLayout->addWidget(polWordLabel);
-
-        angWordLabel = new QLabel(verticalLayoutWidget);
-        angWordLabel->setObjectName(QStringLiteral("angWordLabel"));
-
-        verticalLayout->addWidget(angWordLabel);
-
-        synonymLabel = new QLabel(verticalLayoutWidget);
-        synonymLabel->setObjectName(QStringLiteral("synonymLabel"));
-
-        verticalLayout->addWidget(synonymLabel);
-
-        sentenceLabel = new QLabel(verticalLayoutWidget);
-        sentenceLabel->setObjectName(QStringLiteral("sentenceLabel"));
-
-        verticalLayout->addWidget(sentenceLabel);
-
+        learnwindow->resize(401, 307);
         checkButton = new QPushButton(learnwindow);
         checkButton->setObjectName(QStringLiteral("checkButton"));
-        checkButton->setGeometry(QRect(290, 270, 75, 23));
+        checkButton->setGeometry(QRect(290, 270, 101, 23));
         horizontalLayoutWidget = new QWidget(learnwindow);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(150, 200, 239, 80));
+        horizontalLayoutWidget->setGeometry(QRect(70, 210, 320, 61));
         buttonsLayout = new QHBoxLayout(horizontalLayoutWidget);
         buttonsLayout->setObjectName(QStringLiteral("buttonsLayout"));
         buttonsLayout->setContentsMargins(0, 0, 0, 0);
@@ -107,6 +82,30 @@ public:
         newWordsLabel = new QLabel(learnwindow);
         newWordsLabel->setObjectName(QStringLiteral("newWordsLabel"));
         newWordsLabel->setGeometry(QRect(0, 20, 121, 16));
+        synonymLabel = new QLabel(learnwindow);
+        synonymLabel->setObjectName(QStringLiteral("synonymLabel"));
+        synonymLabel->setGeometry(QRect(290, 70, 169, 32));
+        engWordLabel = new QLabel(learnwindow);
+        engWordLabel->setObjectName(QStringLiteral("engWordLabel"));
+        engWordLabel->setGeometry(QRect(290, 100, 169, 33));
+        synonymLabel_2 = new QLabel(learnwindow);
+        synonymLabel_2->setObjectName(QStringLiteral("synonymLabel_2"));
+        synonymLabel_2->setGeometry(QRect(180, 70, 89, 32));
+        plWordLabel = new QLabel(learnwindow);
+        plWordLabel->setObjectName(QStringLiteral("plWordLabel"));
+        plWordLabel->setGeometry(QRect(290, 40, 169, 33));
+        sentenceLabel_2 = new QLabel(learnwindow);
+        sentenceLabel_2->setObjectName(QStringLiteral("sentenceLabel_2"));
+        sentenceLabel_2->setGeometry(QRect(180, 130, 89, 33));
+        engWordLabel_2 = new QLabel(learnwindow);
+        engWordLabel_2->setObjectName(QStringLiteral("engWordLabel_2"));
+        engWordLabel_2->setGeometry(QRect(180, 100, 89, 33));
+        sentenceLabel = new QLabel(learnwindow);
+        sentenceLabel->setObjectName(QStringLiteral("sentenceLabel"));
+        sentenceLabel->setGeometry(QRect(290, 130, 91, 33));
+        plWordLabel_2 = new QLabel(learnwindow);
+        plWordLabel_2->setObjectName(QStringLiteral("plWordLabel_2"));
+        plWordLabel_2->setGeometry(QRect(180, 40, 89, 33));
 
         retranslateUi(learnwindow);
 
@@ -116,16 +115,20 @@ public:
     void retranslateUi(QDialog *learnwindow)
     {
         learnwindow->setWindowTitle(QApplication::translate("learnwindow", "Nauka s\305\202\303\263wek", 0));
-        polWordLabel->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo", 0));
-        angWordLabel->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo", 0));
-        synonymLabel->setText(QApplication::translate("learnwindow", "Synonimy:", 0));
-        sentenceLabel->setText(QApplication::translate("learnwindow", "Zdanie:", 0));
         checkButton->setText(QApplication::translate("learnwindow", "Sprawd\305\272", 0));
         incorrectlyButton->setText(QApplication::translate("learnwindow", "Nie wiem", 0));
         almostButton->setText(QApplication::translate("learnwindow", "Prawie", 0));
         correctlyButton->setText(QApplication::translate("learnwindow", "Wiem", 0));
         learnedWordsLabel->setText(QApplication::translate("learnwindow", "Nauczone s\305\202owa", 0));
         newWordsLabel->setText(QApplication::translate("learnwindow", "Na dzi\305\233 s\305\202\303\263w: ", 0));
+        synonymLabel->setText(QApplication::translate("learnwindow", "Synonimy:", 0));
+        engWordLabel->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo", 0));
+        synonymLabel_2->setText(QApplication::translate("learnwindow", "Synonimy           :", 0));
+        plWordLabel->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo", 0));
+        sentenceLabel_2->setText(QApplication::translate("learnwindow", "Zdanie               :", 0));
+        engWordLabel_2->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo:", 0));
+        sentenceLabel->setText(QApplication::translate("learnwindow", "Zdanie               :", 0));
+        plWordLabel_2->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo     :", 0));
     } // retranslateUi
 
 };

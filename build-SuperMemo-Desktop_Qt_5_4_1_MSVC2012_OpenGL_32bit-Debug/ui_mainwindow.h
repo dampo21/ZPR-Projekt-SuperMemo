@@ -52,7 +52,11 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(524, 266);
+        MainWindow->resize(502, 283);
+        MainWindow->setMinimumSize(QSize(502, 283));
+        MainWindow->setMaximumSize(QSize(502, 283));
+        MainWindow->setWindowTitle(QStringLiteral("Program do nauki"));
+        MainWindow->setAutoFillBackground(false);
         actionZamknij = new QAction(MainWindow);
         actionZamknij->setObjectName(QStringLiteral("actionZamknij"));
         centralWidget = new QWidget(MainWindow);
@@ -110,7 +114,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 524, 21));
+        menuBar->setGeometry(QRect(0, 0, 502, 21));
         menuMenu = new QMenu(menuBar);
         menuMenu->setObjectName(QStringLiteral("menuMenu"));
         MainWindow->setMenuBar(menuBar);
@@ -131,7 +135,6 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Program do nauki", 0));
         actionZamknij->setText(QApplication::translate("MainWindow", "Zamknij", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Logowanie", 0));
         label_2->setText(QApplication::translate("MainWindow", "Ile s\305\202\303\263wek chcesz si\304\231 uczy\304\207?", 0));
@@ -142,6 +145,7 @@ public:
         wordsButton->setText(QApplication::translate("MainWindow", "Baza s\305\202\303\263w", 0));
         exitButton->setText(QApplication::translate("MainWindow", "Wyj\305\233cie", 0));
         menuMenu->setTitle(QApplication::translate("MainWindow", "Menu", 0));
+        Q_UNUSED(MainWindow);
     } // retranslateUi
 
 };
