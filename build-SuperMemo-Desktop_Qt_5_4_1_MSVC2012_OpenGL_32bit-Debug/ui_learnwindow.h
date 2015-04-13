@@ -16,6 +16,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
@@ -28,16 +29,19 @@ class Ui_learnwindow
 public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QLabel *angWordLabel;
-    QLabel *polWordLabel;
+    QLabel *plWordLabel;
+    QLabel *engWordLabel;
     QLabel *synonymLabel;
     QLabel *sentenceLabel;
     QPushButton *checkButton;
     QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *buttonsLayout;
     QPushButton *incorrectlyButton;
     QPushButton *almostButton;
     QPushButton *correctlyButton;
+    QLabel *learnedWordsLabel;
+    QLCDNumber *lcdNumber;
+    QLabel *newWordsLabel;
 
     void setupUi(QDialog *learnwindow)
     {
@@ -46,19 +50,19 @@ public:
         learnwindow->resize(400, 300);
         verticalLayoutWidget = new QWidget(learnwindow);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(100, 30, 201, 151));
+        verticalLayoutWidget->setGeometry(QRect(150, 30, 201, 151));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        angWordLabel = new QLabel(verticalLayoutWidget);
-        angWordLabel->setObjectName(QStringLiteral("angWordLabel"));
+        plWordLabel = new QLabel(verticalLayoutWidget);
+        plWordLabel->setObjectName(QStringLiteral("plWordLabel"));
 
-        verticalLayout->addWidget(angWordLabel);
+        verticalLayout->addWidget(plWordLabel);
 
-        polWordLabel = new QLabel(verticalLayoutWidget);
-        polWordLabel->setObjectName(QStringLiteral("polWordLabel"));
+        engWordLabel = new QLabel(verticalLayoutWidget);
+        engWordLabel->setObjectName(QStringLiteral("engWordLabel"));
 
-        verticalLayout->addWidget(polWordLabel);
+        verticalLayout->addWidget(engWordLabel);
 
         synonymLabel = new QLabel(verticalLayoutWidget);
         synonymLabel->setObjectName(QStringLiteral("synonymLabel"));
@@ -75,25 +79,34 @@ public:
         checkButton->setGeometry(QRect(290, 270, 75, 23));
         horizontalLayoutWidget = new QWidget(learnwindow);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(150, 180, 239, 80));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayoutWidget->setGeometry(QRect(150, 200, 239, 80));
+        buttonsLayout = new QHBoxLayout(horizontalLayoutWidget);
+        buttonsLayout->setObjectName(QStringLiteral("buttonsLayout"));
+        buttonsLayout->setContentsMargins(0, 0, 0, 0);
         incorrectlyButton = new QPushButton(horizontalLayoutWidget);
         incorrectlyButton->setObjectName(QStringLiteral("incorrectlyButton"));
 
-        horizontalLayout->addWidget(incorrectlyButton);
+        buttonsLayout->addWidget(incorrectlyButton);
 
         almostButton = new QPushButton(horizontalLayoutWidget);
         almostButton->setObjectName(QStringLiteral("almostButton"));
 
-        horizontalLayout->addWidget(almostButton);
+        buttonsLayout->addWidget(almostButton);
 
         correctlyButton = new QPushButton(horizontalLayoutWidget);
         correctlyButton->setObjectName(QStringLiteral("correctlyButton"));
 
-        horizontalLayout->addWidget(correctlyButton);
+        buttonsLayout->addWidget(correctlyButton);
 
+        learnedWordsLabel = new QLabel(learnwindow);
+        learnedWordsLabel->setObjectName(QStringLiteral("learnedWordsLabel"));
+        learnedWordsLabel->setGeometry(QRect(0, 40, 81, 41));
+        lcdNumber = new QLCDNumber(learnwindow);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setGeometry(QRect(80, 50, 51, 23));
+        newWordsLabel = new QLabel(learnwindow);
+        newWordsLabel->setObjectName(QStringLiteral("newWordsLabel"));
+        newWordsLabel->setGeometry(QRect(0, 20, 121, 16));
 
         retranslateUi(learnwindow);
 
@@ -102,15 +115,17 @@ public:
 
     void retranslateUi(QDialog *learnwindow)
     {
-        learnwindow->setWindowTitle(QApplication::translate("learnwindow", "Dialog", 0));
-        angWordLabel->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo", 0));
-        polWordLabel->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo", 0));
+        learnwindow->setWindowTitle(QApplication::translate("learnwindow", "Nauka s\305\202\303\263wek", 0));
+        plWordLabel->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo", 0));
+        engWordLabel->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo", 0));
         synonymLabel->setText(QApplication::translate("learnwindow", "Synonimy:", 0));
         sentenceLabel->setText(QApplication::translate("learnwindow", "Zdanie:", 0));
         checkButton->setText(QApplication::translate("learnwindow", "Sprawd\305\272", 0));
         incorrectlyButton->setText(QApplication::translate("learnwindow", "Nie wiem", 0));
         almostButton->setText(QApplication::translate("learnwindow", "Prawie", 0));
         correctlyButton->setText(QApplication::translate("learnwindow", "Wiem", 0));
+        learnedWordsLabel->setText(QApplication::translate("learnwindow", "Nauczone s\305\202owa", 0));
+        newWordsLabel->setText(QApplication::translate("learnwindow", "Na dzi\305\233 s\305\202\303\263w: ", 0));
     } // retranslateUi
 
 };

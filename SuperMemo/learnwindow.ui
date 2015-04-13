@@ -24,14 +24,14 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="polWordLabel">
+     <widget class="QLabel" name="plWordLabel">
       <property name="text">
        <string>Polskie słowo</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="angWordLabel">
+     <widget class="QLabel" name="engWordLabel">
       <property name="text">
        <string>Angielskie słowo</string>
       </property>

@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "QtSql/QtSql"
-#include <QMessageBox>
+
 #include "learnwindow.h"
 #include "addwordwindow.h"
 

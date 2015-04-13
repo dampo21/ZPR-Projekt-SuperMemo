@@ -2,6 +2,7 @@
 #define LEARNWINDOW_H
 
 #include <QDialog>
+#include "string"
 
 namespace Ui {
 class learnwindow;
@@ -29,6 +30,7 @@ private slots:
 private:
     Ui::learnwindow *ui;
     int learnedWordsCounter;
+    std::string dBase;
 };
 
 #endif // LEARNWINDOW_H

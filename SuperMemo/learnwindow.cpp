@@ -1,6 +1,9 @@
 #include "learnwindow.h"
 #include "ui_learnwindow.h"
+#include "QtSql/QtSql"
+#include <QMessageBox>
 
+using namespace std;
 learnwindow::learnwindow(QWidget *parent, int number) :
     QDialog(parent),
     ui(new Ui::learnwindow)
@@ -14,6 +17,34 @@ learnwindow::learnwindow(QWidget *parent, int number) :
     learnedWordsCounter = 0;
     ui->lcdNumber->display(learnedWordsCounter);
     ui->newWordsLabel->setText("Nowe słowa na dziś: " + QString::number(number));
+
+
+    dBase="dane.db";
+    QSqlDatabase db = QSqlDatabase::addDatabase( "QSQLITE" );
+    db.setDatabaseName(QString::fromStdString(dBase));
+    if(!db.open()){
+        QMessageBox::critical(0,"Błąd","Nie udało się otworzyć bazy danych !");
+    }
+  else{
+        try{
+            QSqlQuery query;
+            query.prepare( "select * from wordsList");
+            if(!query.exec()){
+               throw exception();
+            }
+            for(int i=0;query.next();i++){
+                ui->polWordLabel->setText(query.value((1)).toString());
+                ui->angWordLabel->setText(query.value((2)).toString());
+                ui->synonymLabel->setText(query.value((3)).toString());
+                ui->sentenceLabel->setText(query.value((4)).toString());
+            }
+            db.close();
+       }
+    catch(const exception &e){
+      QMessageBox::critical(0,"Błąd","Nie udało się odczytać danych z bazy !");
+    }
+    }
+
 }
 
 learnwindow::~learnwindow()
