@@ -30,10 +30,13 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>170</y>
+      <x>350</x>
+      <y>20</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -46,7 +49,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>30</y>
+      <y>80</y>
       <width>160</width>
       <height>19</height>
      </rect>
@@ -71,7 +74,7 @@
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>10</y>
+      <y>60</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -84,7 +87,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>50</y>
+      <y>100</y>
       <width>47</width>
       <height>13</height>
      </rect>
@@ -112,6 +115,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="scheduleButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Kalendarz</string>
        </property>
@@ -126,6 +132,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="wordsButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Baza słów</string>
        </property>
@@ -154,6 +163,8 @@
     <property name="title">
      <string>Menu</string>
     </property>
+    <addaction name="actionZmien_uzytkownika"/>
+    <addaction name="separator"/>
     <addaction name="actionZamknij"/>
    </widget>
    <addaction name="menuMenu"/>
@@ -170,6 +181,11 @@
   <action name="actionZamknij">
    <property name="text">
     <string>Zamknij</string>
+   </property>
+  </action>
+  <action name="actionZmien_uzytkownika">
+   <property name="text">
+    <string>Zmien uzytkownika</string>
    </property>
   </action>
  </widget>
