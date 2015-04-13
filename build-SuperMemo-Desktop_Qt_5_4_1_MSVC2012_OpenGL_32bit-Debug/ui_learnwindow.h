@@ -48,7 +48,9 @@ public:
     {
         if (learnwindow->objectName().isEmpty())
             learnwindow->setObjectName(QStringLiteral("learnwindow"));
-        learnwindow->resize(521, 307);
+        learnwindow->resize(407, 303);
+        learnwindow->setMinimumSize(QSize(407, 303));
+        learnwindow->setMaximumSize(QSize(407, 303));
         checkButton = new QPushButton(learnwindow);
         checkButton->setObjectName(QStringLiteral("checkButton"));
         checkButton->setGeometry(QRect(290, 270, 101, 23));
@@ -75,13 +77,13 @@ public:
 
         learnedWordsLabel = new QLabel(learnwindow);
         learnedWordsLabel->setObjectName(QStringLiteral("learnedWordsLabel"));
-        learnedWordsLabel->setGeometry(QRect(0, 40, 81, 41));
+        learnedWordsLabel->setGeometry(QRect(100, 30, 81, 41));
         lcdNumber = new QLCDNumber(learnwindow);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
-        lcdNumber->setGeometry(QRect(80, 50, 51, 23));
+        lcdNumber->setGeometry(QRect(180, 40, 51, 23));
         newWordsLabel = new QLabel(learnwindow);
         newWordsLabel->setObjectName(QStringLiteral("newWordsLabel"));
-        newWordsLabel->setGeometry(QRect(0, 20, 121, 16));
+        newWordsLabel->setGeometry(QRect(100, 10, 121, 16));
         synonymLabel = new QLabel(learnwindow);
         synonymLabel->setObjectName(QStringLiteral("synonymLabel"));
         synonymLabel->setGeometry(QRect(200, 110, 169, 32));
@@ -102,7 +104,7 @@ public:
         engWordLabel_2->setGeometry(QRect(90, 140, 89, 33));
         sentenceLabel = new QLabel(learnwindow);
         sentenceLabel->setObjectName(QStringLiteral("sentenceLabel"));
-        sentenceLabel->setGeometry(QRect(200, 170, 91, 33));
+        sentenceLabel->setGeometry(QRect(200, 170, 191, 33));
         plWordLabel_2 = new QLabel(learnwindow);
         plWordLabel_2->setObjectName(QStringLiteral("plWordLabel_2"));
         plWordLabel_2->setGeometry(QRect(90, 80, 89, 33));
