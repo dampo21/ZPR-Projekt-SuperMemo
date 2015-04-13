@@ -16,7 +16,7 @@
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>150</x>
      <y>30</y>
      <width>201</width>
      <height>151</height>
@@ -24,16 +24,16 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="angWordLabel">
+     <widget class="QLabel" name="polWordLabel">
       <property name="text">
-       <string>Angielskie słowo</string>
+       <string>Polskie słowo</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="polWordLabel">
+     <widget class="QLabel" name="angWordLabel">
       <property name="text">
-       <string>Polskie słowo</string>
+       <string>Angielskie słowo</string>
       </property>
      </widget>
     </item>
@@ -70,12 +70,12 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>180</y>
+     <y>200</y>
      <width>239</width>
      <height>80</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="buttonsLayout">
     <item>
      <widget class="QPushButton" name="incorrectlyButton">
       <property name="text">
@@ -98,6 +98,29 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="learnedWordsLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>40</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nauczone słowa</string>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcdNumber">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>51</width>
+     <height>23</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -20,8 +20,13 @@ private slots:
 
     void on_correctlyButton_clicked();
 
+    void on_incorrectlyButton_clicked();
+
+    void on_almostButton_clicked();
+
 private:
     Ui::learnwindow *ui;
+    int learnedWordsCounter;
 };
 
 #endif // LEARNWINDOW_H

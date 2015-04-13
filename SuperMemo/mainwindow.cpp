@@ -61,12 +61,7 @@ void MainWindow::on_actionZamknij_triggered()
 
 void MainWindow::on_learnButton_clicked()
 {
-<<<<<<< HEAD
-    learnwindow
-   // lw.show();
-=======
-
     learnwindow *l = new learnwindow(this);
     l->show();
->>>>>>> origin/master
+
 }
