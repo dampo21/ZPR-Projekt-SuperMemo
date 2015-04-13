@@ -115,7 +115,7 @@ public:
 
     void retranslateUi(QDialog *learnwindow)
     {
-        learnwindow->setWindowTitle(QApplication::translate("learnwindow", "Dialog", 0));
+        learnwindow->setWindowTitle(QApplication::translate("learnwindow", "Nauka s\305\202\303\263wek", 0));
         polWordLabel->setText(QApplication::translate("learnwindow", "Polskie s\305\202owo", 0));
         angWordLabel->setText(QApplication::translate("learnwindow", "Angielskie s\305\202owo", 0));
         synonymLabel->setText(QApplication::translate("learnwindow", "Synonimy:", 0));

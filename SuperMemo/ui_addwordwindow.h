@@ -95,7 +95,7 @@ public:
 
     void retranslateUi(QDialog *addwordwindow)
     {
-        addwordwindow->setWindowTitle(QApplication::translate("addwordwindow", "Dialog", 0));
+        addwordwindow->setWindowTitle(QApplication::translate("addwordwindow", "Dodaj s\305\202owo", 0));
         label->setText(QApplication::translate("addwordwindow", "S\305\202\303\263wko", 0));
         label_2->setText(QApplication::translate("addwordwindow", "Polskie znaczenie", 0));
         label_3->setText(QApplication::translate("addwordwindow", "Przyk\305\202adowe zdanie", 0));
