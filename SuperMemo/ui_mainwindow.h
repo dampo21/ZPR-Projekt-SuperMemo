@@ -23,6 +23,7 @@
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,10 +36,16 @@ public:
     QPushButton *pushButton;
     QLabel *label;
     QListWidget *listWidget_sets;
-    QPushButton *learnButton;
-    QPushButton *addWordButton;
     QSlider *numbeWordsSlider;
     QLabel *label_2;
+    QLabel *numberWordsLabel;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *learnButton;
+    QPushButton *scheduleButton;
+    QPushButton *addWordButton;
+    QPushButton *wordsButton;
+    QPushButton *exitButton;
     QMenuBar *menuBar;
     QMenu *menuMenu;
     QToolBar *mainToolBar;
@@ -55,28 +62,60 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(210, 150, 75, 23));
+        pushButton->setGeometry(QRect(350, 150, 75, 23));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(360, 120, 47, 13));
         listWidget_sets = new QListWidget(centralWidget);
         listWidget_sets->setObjectName(QStringLiteral("listWidget_sets"));
-        listWidget_sets->setGeometry(QRect(10, 20, 171, 192));
-        learnButton = new QPushButton(centralWidget);
-        learnButton->setObjectName(QStringLiteral("learnButton"));
-        learnButton->setGeometry(QRect(210, 30, 75, 23));
-        addWordButton = new QPushButton(centralWidget);
-        addWordButton->setObjectName(QStringLiteral("addWordButton"));
-        addWordButton->setGeometry(QRect(210, 80, 75, 23));
+        listWidget_sets->setGeometry(QRect(0, 20, 171, 192));
         numbeWordsSlider = new QSlider(centralWidget);
         numbeWordsSlider->setObjectName(QStringLiteral("numbeWordsSlider"));
-        numbeWordsSlider->setGeometry(QRect(310, 40, 160, 19));
+        numbeWordsSlider->setGeometry(QRect(310, 30, 160, 19));
+        numbeWordsSlider->setMouseTracking(false);
+        numbeWordsSlider->setAcceptDrops(false);
         numbeWordsSlider->setMinimum(1);
         numbeWordsSlider->setMaximum(50);
         numbeWordsSlider->setOrientation(Qt::Horizontal);
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(330, 10, 151, 21));
+        numberWordsLabel = new QLabel(centralWidget);
+        numberWordsLabel->setObjectName(QStringLiteral("numberWordsLabel"));
+        numberWordsLabel->setGeometry(QRect(380, 50, 47, 13));
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(170, 20, 131, 201));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        learnButton = new QPushButton(verticalLayoutWidget);
+        learnButton->setObjectName(QStringLiteral("learnButton"));
+
+        verticalLayout->addWidget(learnButton);
+
+        scheduleButton = new QPushButton(verticalLayoutWidget);
+        scheduleButton->setObjectName(QStringLiteral("scheduleButton"));
+
+        verticalLayout->addWidget(scheduleButton);
+
+        addWordButton = new QPushButton(verticalLayoutWidget);
+        addWordButton->setObjectName(QStringLiteral("addWordButton"));
+
+        verticalLayout->addWidget(addWordButton);
+
+        wordsButton = new QPushButton(verticalLayoutWidget);
+        wordsButton->setObjectName(QStringLiteral("wordsButton"));
+
+        verticalLayout->addWidget(wordsButton);
+
+        exitButton = new QPushButton(verticalLayoutWidget);
+        exitButton->setObjectName(QStringLiteral("exitButton"));
+
+        verticalLayout->addWidget(exitButton);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -105,9 +144,13 @@ public:
         actionZamknij->setText(QApplication::translate("MainWindow", "Zamknij", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Logowanie", 0));
         label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        learnButton->setText(QApplication::translate("MainWindow", "Nauka", 0));
-        addWordButton->setText(QApplication::translate("MainWindow", "Dodaj s\305\202owo", 0));
         label_2->setText(QApplication::translate("MainWindow", "Ile s\305\202\303\263wek chcesz si\304\231 uczy\304\207?", 0));
+        numberWordsLabel->setText(QApplication::translate("MainWindow", "1", 0));
+        learnButton->setText(QApplication::translate("MainWindow", "Nauka", 0));
+        scheduleButton->setText(QApplication::translate("MainWindow", "Kalendarz", 0));
+        addWordButton->setText(QApplication::translate("MainWindow", "Dodaj s\305\202owo", 0));
+        wordsButton->setText(QApplication::translate("MainWindow", "Baza s\305\202\303\263w", 0));
+        exitButton->setText(QApplication::translate("MainWindow", "Wyj\305\233cie", 0));
         menuMenu->setTitle(QApplication::translate("MainWindow", "Menu", 0));
     } // retranslateUi
 

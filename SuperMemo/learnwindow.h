@@ -24,6 +24,8 @@ private slots:
 
     void on_almostButton_clicked();
 
+    void reject();
+
 private:
     Ui::learnwindow *ui;
     int learnedWordsCounter;

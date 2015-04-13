@@ -24,8 +24,13 @@ private slots:
 
     void on_addWordButton_clicked();
 
+    void on_numbeWordsSlider_actionTriggered(int action);
+
+    void on_numbeWordsSlider_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
+    QString str;
 };
 
 #endif // MAINWINDOW_H

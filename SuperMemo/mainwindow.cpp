@@ -13,6 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //ui->numberWordsLabel->setText(ui->numbeWordsSlider->value());
+    ui->numberWordsLabel->setText(str.setNum(ui->numbeWordsSlider->value()));
+   // connect(ui->numbeWordsSlider,SIGNAL(valueChanged(int)),ui->numberWordsLabel,SLOT(setValue(int)));
+
 /*
 
 
@@ -62,13 +66,23 @@ void MainWindow::on_actionZamknij_triggered()
 
 void MainWindow::on_learnButton_clicked()
 {
-    learnwindow *l = new learnwindow(this,5);
+    this->hide();
+    learnwindow *l = new learnwindow(this,ui->numbeWordsSlider->value());
     l->show();
-
 }
 
 void MainWindow::on_addWordButton_clicked()
 {
     addwordwindow *aaw = new addwordwindow(this);
     aaw->show();
+}
+
+void MainWindow::on_numbeWordsSlider_actionTriggered(int action)
+{
+    ui->numberWordsLabel->setText(str.setNum(action));
+}
+
+void MainWindow::on_numbeWordsSlider_valueChanged(int value)
+{
+    ui->numberWordsLabel->setText(str.setNum(value));
 }

@@ -41,6 +41,7 @@ public:
     QPushButton *correctlyButton;
     QLabel *learnedWordsLabel;
     QLCDNumber *lcdNumber;
+    QLabel *newWordsLabel;
 
     void setupUi(QDialog *learnwindow)
     {
@@ -103,6 +104,9 @@ public:
         lcdNumber = new QLCDNumber(learnwindow);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
         lcdNumber->setGeometry(QRect(80, 50, 51, 23));
+        newWordsLabel = new QLabel(learnwindow);
+        newWordsLabel->setObjectName(QStringLiteral("newWordsLabel"));
+        newWordsLabel->setGeometry(QRect(0, 20, 121, 16));
 
         retranslateUi(learnwindow);
 
@@ -121,6 +125,7 @@ public:
         almostButton->setText(QApplication::translate("learnwindow", "Prawie", 0));
         correctlyButton->setText(QApplication::translate("learnwindow", "Wiem", 0));
         learnedWordsLabel->setText(QApplication::translate("learnwindow", "Nauczone s\305\202owa", 0));
+        newWordsLabel->setText(QApplication::translate("learnwindow", "Na dzi\305\233 s\305\202\303\263w: ", 0));
     } // retranslateUi
 
 };
