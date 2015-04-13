@@ -51,3 +51,8 @@ void MainWindow::on_numbeWordsSlider_valueChanged(int value)
 {
     ui->numberWordsLabel->setText(str.setNum(value));
 }
+
+void MainWindow::on_exitButton_clicked()
+{
+    QApplication::quit();
+}

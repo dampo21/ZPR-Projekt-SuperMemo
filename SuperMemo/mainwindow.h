@@ -28,6 +28,8 @@ private slots:
 
     void on_numbeWordsSlider_valueChanged(int value);
 
+    void on_exitButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString str;
