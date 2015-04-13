@@ -1,3 +1,9 @@
+/**
+ * @file learnwindow.h
+ * @author Damian Pobrotyn and Kamil Rostecki
+ * @brief Definition of the class learnwindow.
+ */
+
 #ifndef LEARNWINDOW_H
 #define LEARNWINDOW_H
 

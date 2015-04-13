@@ -1,3 +1,9 @@
+/**
+ * @file addwordwindow.h
+ * @author Damian Pobrotyn and Kamil Rostecki
+ * @brief Definition of the class addwordwindow.
+ */
+
 #ifndef ADDWORDWINDOW_H
 #define ADDWORDWINDOW_H
 

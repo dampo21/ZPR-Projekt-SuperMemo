@@ -1,3 +1,9 @@
+/**
+ * @file learnwindow.cpp
+ * @author Damian Pobrotyn and Kamil Rostecki
+ * @brief Implementation of the learnwindow class methods.
+ */
+
 #include "learnwindow.h"
 #include "ui_learnwindow.h"
 #include "QtSql/QtSql"
@@ -22,10 +28,11 @@ learnwindow::learnwindow(QWidget *parent, int number) :
     dBase="dane.db";
     QSqlDatabase db = QSqlDatabase::addDatabase( "QSQLITE" );
     db.setDatabaseName(QString::fromStdString(dBase));
+
     if(!db.open()){
         QMessageBox::critical(0,"Błąd","Nie udało się otworzyć bazy danych !");
     }
-  else{
+    else{
         try{
             QSqlQuery query;
             query.prepare( "select * from wordsList");
@@ -40,9 +47,9 @@ learnwindow::learnwindow(QWidget *parent, int number) :
             }
             db.close();
        }
-    catch(const exception &e){
-      QMessageBox::critical(0,"Błąd","Nie udało się odczytać danych z bazy !");
-    }
+        catch(const exception &e){
+            QMessageBox::critical(0,"Błąd","Nie udało się odczytać danych z bazy !");
+        }
     }
 
 }

@@ -1,3 +1,11 @@
+/**
+ * @file addwordwindow.cpp
+ * @author Damian Pobrotyn and Kamil Rostecki
+ * @brief Definition of the class addwordwindow.
+ * @brief Implementation of the addwordwindow class methods.
+ */
+
+
 #include "addwordwindow.h"
 #include "ui_addwordwindow.h"
 
