@@ -62,7 +62,7 @@ void MainWindow::on_actionZamknij_triggered()
 
 void MainWindow::on_learnButton_clicked()
 {
-    learnwindow *l = new learnwindow(this);
+    learnwindow *l = new learnwindow(this,5);
     l->show();
 
 }

@@ -20,6 +20,7 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -36,6 +37,8 @@ public:
     QListWidget *listWidget_sets;
     QPushButton *learnButton;
     QPushButton *addWordButton;
+    QSlider *numbeWordsSlider;
+    QLabel *label_2;
     QMenuBar *menuBar;
     QMenu *menuMenu;
     QToolBar *mainToolBar;
@@ -65,6 +68,15 @@ public:
         addWordButton = new QPushButton(centralWidget);
         addWordButton->setObjectName(QStringLiteral("addWordButton"));
         addWordButton->setGeometry(QRect(210, 80, 75, 23));
+        numbeWordsSlider = new QSlider(centralWidget);
+        numbeWordsSlider->setObjectName(QStringLiteral("numbeWordsSlider"));
+        numbeWordsSlider->setGeometry(QRect(310, 40, 160, 19));
+        numbeWordsSlider->setMinimum(1);
+        numbeWordsSlider->setMaximum(50);
+        numbeWordsSlider->setOrientation(Qt::Horizontal);
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(330, 10, 151, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -95,6 +107,7 @@ public:
         label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         learnButton->setText(QApplication::translate("MainWindow", "Nauka", 0));
         addWordButton->setText(QApplication::translate("MainWindow", "Dodaj s\305\202owo", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Ile s\305\202\303\263wek chcesz si\304\231 uczy\304\207?", 0));
         menuMenu->setTitle(QApplication::translate("MainWindow", "Menu", 0));
     } // retranslateUi
 

@@ -1,7 +1,7 @@
 #include "learnwindow.h"
 #include "ui_learnwindow.h"
 
-learnwindow::learnwindow(QWidget *parent) :
+learnwindow::learnwindow(QWidget *parent, int number) :
     QDialog(parent),
     ui(new Ui::learnwindow)
 {

@@ -12,7 +12,7 @@ class learnwindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit learnwindow(QWidget *parent = 0);
+    explicit learnwindow(QWidget *parent = 0, int number=0);
     ~learnwindow();
 
 private slots:
