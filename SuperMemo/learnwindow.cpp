@@ -1,18 +1,18 @@
 /**
- * @file learnwindow.cpp
+ * @file LearnWindow.cpp
  * @author Damian Pobrotyn and Kamil Rostecki
- * @brief Implementation of the learnwindow class methods.
+ * @brief Implementation of the LearnWindow class methods.
  */
 
-#include "learnwindow.h"
-#include "ui_learnwindow.h"
+#include "LearnWindow.h"
+#include "ui_LearnWindow.h"
 #include "QtSql/QtSql"
 #include <QMessageBox>
 
 using namespace std;
-learnwindow::learnwindow(QWidget *parent, int number) :
+LearnWindow::LearnWindow(QWidget *parent, int number) :
     QDialog(parent),
-    ui(new Ui::learnwindow)
+    ui(new Ui::LearnWindow)
 {
     ui->setupUi(this);
     ui->correctlyButton->hide();
@@ -54,12 +54,12 @@ learnwindow::learnwindow(QWidget *parent, int number) :
 
 }
 
-learnwindow::~learnwindow()
+LearnWindow::~LearnWindow()
 {
     delete ui;
 }
 
-void learnwindow::on_checkButton_clicked()
+void LearnWindow::on_checkButton_clicked()
 {
     ui->checkButton->hide();
     ui->correctlyButton->show();
@@ -69,7 +69,7 @@ void learnwindow::on_checkButton_clicked()
     ui->sentenceLabel->show();
 }
 
-void learnwindow::on_correctlyButton_clicked()
+void LearnWindow::on_correctlyButton_clicked()
 {
     ui->checkButton->show();
     ui->correctlyButton->hide();
@@ -81,7 +81,7 @@ void learnwindow::on_correctlyButton_clicked()
     ui->lcdNumber->display(learnedWordsCounter);
 }
 
-void learnwindow::on_incorrectlyButton_clicked()
+void LearnWindow::on_incorrectlyButton_clicked()
 {
     ui->checkButton->show();
     ui->correctlyButton->hide();
@@ -91,7 +91,7 @@ void learnwindow::on_incorrectlyButton_clicked()
     ui->sentenceLabel->hide();
 }
 
-void learnwindow::on_almostButton_clicked()
+void LearnWindow::on_almostButton_clicked()
 {
     ui->checkButton->show();
     ui->correctlyButton->hide();
@@ -101,7 +101,7 @@ void learnwindow::on_almostButton_clicked()
     ui->sentenceLabel->hide();
 }
 
-void learnwindow::reject()
+void LearnWindow::reject()
 {
     QApplication::quit();
 }

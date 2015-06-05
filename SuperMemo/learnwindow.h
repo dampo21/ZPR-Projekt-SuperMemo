@@ -11,16 +11,16 @@
 #include "string"
 
 namespace Ui {
-class learnwindow;
+class LearnWindow;
 }
 
-class learnwindow : public QDialog
+class LearnWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit learnwindow(QWidget *parent = 0, int number=0);
-    ~learnwindow();
+    explicit LearnWindow(QWidget *parent = 0, int number=0);
+    ~LearnWindow();
 
 private slots:
     void on_checkButton_clicked();
@@ -34,7 +34,7 @@ private slots:
     void reject();
 
 private:
-    Ui::learnwindow *ui;
+    Ui::LearnWindow *ui;
     int learnedWordsCounter;
     std::string dBase;
 };

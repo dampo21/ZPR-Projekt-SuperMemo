@@ -136,7 +136,7 @@ public:
 };
 
 namespace Ui {
-    class learnwindow: public Ui_learnwindow {};
+    class LearnWindow: public Ui_learnwindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

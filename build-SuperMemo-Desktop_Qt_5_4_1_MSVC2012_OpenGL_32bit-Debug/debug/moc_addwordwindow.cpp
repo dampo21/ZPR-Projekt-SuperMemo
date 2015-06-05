@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'addwordwindow.h'
+** Meta object code from reading C++ file 'AddWordWindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../SuperMemo/addwordwindow.h"
+#include "../../SuperMemo/AddWordWindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'addwordwindow.h' doesn't include <QObject>."
+#error "The header file 'AddWordWindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,29 +18,29 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_addwordwindow_t {
+struct qt_meta_stringdata_AddWordWindow_t {
     QByteArrayData data[4];
     char stringdata[61];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_addwordwindow_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_AddWordWindow_t, stringdata) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_addwordwindow_t qt_meta_stringdata_addwordwindow = {
+static const qt_meta_stringdata_AddWordWindow_t qt_meta_stringdata_AddWordWindow = {
     {
-QT_MOC_LITERAL(0, 0, 13), // "addwordwindow"
+QT_MOC_LITERAL(0, 0, 13), // "AddWordWindow"
 QT_MOC_LITERAL(1, 14, 23), // "on_cancelButton_clicked"
 QT_MOC_LITERAL(2, 38, 0), // ""
 QT_MOC_LITERAL(3, 39, 21) // "on_saveButton_clicked"
 
     },
-    "addwordwindow\0on_cancelButton_clicked\0"
+    "AddWordWindow\0on_cancelButton_clicked\0"
     "\0on_saveButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_addwordwindow[] = {
+static const uint qt_meta_data_AddWordWindow[] = {
 
  // content:
        7,       // revision
@@ -64,10 +64,10 @@ static const uint qt_meta_data_addwordwindow[] = {
        0        // eod
 };
 
-void addwordwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void AddWordWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        addwordwindow *_t = static_cast<addwordwindow *>(_o);
+        AddWordWindow *_t = static_cast<AddWordWindow *>(_o);
         switch (_id) {
         case 0: _t->on_cancelButton_clicked(); break;
         case 1: _t->on_saveButton_clicked(); break;
@@ -77,26 +77,26 @@ void addwordwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     Q_UNUSED(_a);
 }
 
-const QMetaObject addwordwindow::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_addwordwindow.data,
-      qt_meta_data_addwordwindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject AddWordWindow::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_AddWordWindow.data,
+      qt_meta_data_AddWordWindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *addwordwindow::metaObject() const
+const QMetaObject *AddWordWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *addwordwindow::qt_metacast(const char *_clname)
+void *AddWordWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_addwordwindow.stringdata))
-        return static_cast<void*>(const_cast< addwordwindow*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_AddWordWindow.stringdata))
+        return static_cast<void*>(const_cast< AddWordWindow*>(this));
     return QDialog::qt_metacast(_clname);
 }
 
-int addwordwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int AddWordWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

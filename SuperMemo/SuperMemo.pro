@@ -14,16 +14,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     settings.cpp \
-    learnwindow.cpp \
-    addwordwindow.cpp
+    AddWordWindow.cpp \
+    LearnWindow.cpp \
+    MainWindow.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     settings.h \
-    learnwindow.h \
-    addwordwindow.h
+    AddWordWindow.h \
+    LearnWindow.h \
+    MainWindow.h
 
-FORMS    += mainwindow.ui \
-    learnwindow.ui \
-    addwordwindow.ui
+FORMS    += \
+    AddWordWindow.ui \
+    LearnWindow.ui \
+    MainWindow.ui

@@ -1,13 +1,13 @@
 /**
- * @file mainwindow.cpp
+ * @file MainWindow.cpp
  * @author Damian Pobrotyn , Kamil Rostecki
  * @brief Implementation of the MainWindow Methods.
  */
 
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "learnwindow.h"
-#include "addwordwindow.h"
+#include "MainWindow.h"
+#include "ui_MainWindow.h"
+#include "LearnWindow.h"
+#include "AddWordWindow.h"
 
 using namespace std;
 
@@ -38,13 +38,13 @@ void MainWindow::on_actionZamknij_triggered()
 void MainWindow::on_learnButton_clicked()
 {
     this->hide();
-    learnwindow *l = new learnwindow(this,ui->numbeWordsSlider->value());
+    LearnWindow *l = new LearnWindow(this,ui->numbeWordsSlider->value());
     l->show();
 }
 
 void MainWindow::on_addWordButton_clicked()
 {
-    addwordwindow *aww = new addwordwindow(this);
+    AddWordWindow *aww = new AddWordWindow(this);
     aww->show();
 }
 

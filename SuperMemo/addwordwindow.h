@@ -10,16 +10,16 @@
 #include <QDialog>
 
 namespace Ui {
-class addwordwindow;
+class AddWordWindow;
 }
 
-class addwordwindow : public QDialog
+class AddWordWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit addwordwindow(QWidget *parent = 0);
-    ~addwordwindow();
+    explicit AddWordWindow(QWidget *parent = 0);
+    ~AddWordWindow();
 
 private slots:
     void on_cancelButton_clicked();
@@ -27,7 +27,7 @@ private slots:
     void on_saveButton_clicked();
 
 private:
-    Ui::addwordwindow *ui;
+    Ui::AddWordWindow *ui;
 };
 
 #endif // ADDWORDWINDOW_H

@@ -107,7 +107,7 @@ public:
 };
 
 namespace Ui {
-    class addwordwindow: public Ui_addwordwindow {};
+    class AddWordWindow: public Ui_addwordwindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

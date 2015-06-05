@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'learnwindow.h'
+** Meta object code from reading C++ file 'LearnWindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../SuperMemo/learnwindow.h"
+#include "../../SuperMemo/LearnWindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'learnwindow.h' doesn't include <QObject>."
+#error "The header file 'LearnWindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,18 +18,18 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_learnwindow_t {
+struct qt_meta_stringdata_LearnWindow_t {
     QByteArrayData data[7];
     char stringdata[123];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_learnwindow_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_LearnWindow_t, stringdata) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_learnwindow_t qt_meta_stringdata_learnwindow = {
+static const qt_meta_stringdata_LearnWindow_t qt_meta_stringdata_LearnWindow = {
     {
-QT_MOC_LITERAL(0, 0, 11), // "learnwindow"
+QT_MOC_LITERAL(0, 0, 11), // "LearnWindow"
 QT_MOC_LITERAL(1, 12, 22), // "on_checkButton_clicked"
 QT_MOC_LITERAL(2, 35, 0), // ""
 QT_MOC_LITERAL(3, 36, 26), // "on_correctlyButton_clicked"
@@ -38,14 +38,14 @@ QT_MOC_LITERAL(5, 92, 23), // "on_almostButton_clicked"
 QT_MOC_LITERAL(6, 116, 6) // "reject"
 
     },
-    "learnwindow\0on_checkButton_clicked\0\0"
+    "LearnWindow\0on_checkButton_clicked\0\0"
     "on_correctlyButton_clicked\0"
     "on_incorrectlyButton_clicked\0"
     "on_almostButton_clicked\0reject"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_learnwindow[] = {
+static const uint qt_meta_data_LearnWindow[] = {
 
  // content:
        7,       // revision
@@ -75,10 +75,10 @@ static const uint qt_meta_data_learnwindow[] = {
        0        // eod
 };
 
-void learnwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void LearnWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        learnwindow *_t = static_cast<learnwindow *>(_o);
+        LearnWindow *_t = static_cast<LearnWindow *>(_o);
         switch (_id) {
         case 0: _t->on_checkButton_clicked(); break;
         case 1: _t->on_correctlyButton_clicked(); break;
@@ -91,26 +91,26 @@ void learnwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     Q_UNUSED(_a);
 }
 
-const QMetaObject learnwindow::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_learnwindow.data,
-      qt_meta_data_learnwindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject LearnWindow::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_LearnWindow.data,
+      qt_meta_data_LearnWindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *learnwindow::metaObject() const
+const QMetaObject *LearnWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *learnwindow::qt_metacast(const char *_clname)
+void *LearnWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_learnwindow.stringdata))
-        return static_cast<void*>(const_cast< learnwindow*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_LearnWindow.stringdata))
+        return static_cast<void*>(const_cast< LearnWindow*>(this));
     return QDialog::qt_metacast(_clname);
 }
 
-int learnwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int LearnWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

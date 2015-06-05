@@ -6,27 +6,27 @@
  */
 
 
-#include "addwordwindow.h"
+#include "AddWordWindow.h"
 #include "ui_addwordwindow.h"
 
-addwordwindow::addwordwindow(QWidget *parent) :
+AddWordWindow::AddWordWindow(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::addwordwindow)
+    ui(new Ui::AddWordWindow)
 {
     ui->setupUi(this);
 }
 
-addwordwindow::~addwordwindow()
+AddWordWindow::~AddWordWindow()
 {
     delete ui;
 }
 
-void addwordwindow::on_cancelButton_clicked()
+void AddWordWindow::on_cancelButton_clicked()
 {
-    addwordwindow::~addwordwindow();
+    AddWordWindow::~AddWordWindow();
 }
 
-void addwordwindow::on_saveButton_clicked()
+void AddWordWindow::on_saveButton_clicked()
 {
     ui->angWordEdit->clear();
     ui->polWordEdit->clear();
