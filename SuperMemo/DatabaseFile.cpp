@@ -279,7 +279,7 @@ void DatabaseFile::resetUser(const string dBase) {
     else{
         try{
             QSqlQuery query;
-            QString str = "UPDATE wordslist SET date = NULL, interval=NULL, efactor=NULL";
+            QString str = "UPDATE wordslist SET date = NULL, interval=0, efactor=NULL";
             query.prepare(str);
 
             if(!query.exec()){

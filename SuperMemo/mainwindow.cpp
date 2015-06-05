@@ -89,6 +89,11 @@ void MainWindow::on_schedule_button_clicked()
 
 void MainWindow::on_clear_button_clicked()
 {
-    dBase = "dane.db";
-    df.resetUser(dBase);
+    QMessageBox::StandardButton reply;
+     reply = QMessageBox::question(this, "Resetowanie ustawien", "Czy na pewno chcesz usunac caly postep nauki?",
+                                   QMessageBox::Yes|QMessageBox::No);
+     if (reply == QMessageBox::Yes) {
+         dBase = "dane.db";
+        df.resetUser(dBase);
+     }
 }
