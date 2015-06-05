@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'addwordwindow.ui'
+** Form generated from reading UI file 'AddWordWindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.4.1
 **
@@ -23,91 +23,91 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_addwordwindow
+class Ui_AddWordWindow
 {
 public:
     QLabel *label;
-    QLineEdit *angWordEdit;
+    QLineEdit *eng_word_edit;
     QLabel *label_2;
-    QLineEdit *polWordEdit;
+    QLineEdit *pol_word_edit;
     QLabel *label_3;
-    QLineEdit *sentenceEdit;
+    QLineEdit *sentence_edit;
     QLabel *label_4;
-    QLineEdit *synonymsEdit;
+    QLineEdit *synonyms_edit;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *cancelButton;
-    QPushButton *saveButton;
+    QPushButton *cancel_button;
+    QPushButton *save_button;
 
-    void setupUi(QDialog *addwordwindow)
+    void setupUi(QDialog *AddWordWindow)
     {
-        if (addwordwindow->objectName().isEmpty())
-            addwordwindow->setObjectName(QStringLiteral("addwordwindow"));
-        addwordwindow->resize(400, 300);
-        label = new QLabel(addwordwindow);
+        if (AddWordWindow->objectName().isEmpty())
+            AddWordWindow->setObjectName(QStringLiteral("AddWordWindow"));
+        AddWordWindow->resize(400, 300);
+        label = new QLabel(AddWordWindow);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(40, 23, 47, 20));
-        angWordEdit = new QLineEdit(addwordwindow);
-        angWordEdit->setObjectName(QStringLiteral("angWordEdit"));
-        angWordEdit->setGeometry(QRect(40, 40, 141, 21));
-        label_2 = new QLabel(addwordwindow);
+        eng_word_edit = new QLineEdit(AddWordWindow);
+        eng_word_edit->setObjectName(QStringLiteral("eng_word_edit"));
+        eng_word_edit->setGeometry(QRect(40, 40, 141, 21));
+        label_2 = new QLabel(AddWordWindow);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setEnabled(true);
         label_2->setGeometry(QRect(40, 70, 91, 16));
-        polWordEdit = new QLineEdit(addwordwindow);
-        polWordEdit->setObjectName(QStringLiteral("polWordEdit"));
-        polWordEdit->setGeometry(QRect(40, 90, 141, 21));
-        label_3 = new QLabel(addwordwindow);
+        pol_word_edit = new QLineEdit(AddWordWindow);
+        pol_word_edit->setObjectName(QStringLiteral("pol_word_edit"));
+        pol_word_edit->setGeometry(QRect(40, 90, 141, 21));
+        label_3 = new QLabel(AddWordWindow);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setEnabled(true);
         label_3->setGeometry(QRect(40, 120, 111, 16));
-        sentenceEdit = new QLineEdit(addwordwindow);
-        sentenceEdit->setObjectName(QStringLiteral("sentenceEdit"));
-        sentenceEdit->setGeometry(QRect(40, 140, 141, 20));
-        label_4 = new QLabel(addwordwindow);
+        sentence_edit = new QLineEdit(AddWordWindow);
+        sentence_edit->setObjectName(QStringLiteral("sentence_edit"));
+        sentence_edit->setGeometry(QRect(40, 140, 141, 20));
+        label_4 = new QLabel(AddWordWindow);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setEnabled(true);
         label_4->setGeometry(QRect(40, 170, 111, 16));
-        synonymsEdit = new QLineEdit(addwordwindow);
-        synonymsEdit->setObjectName(QStringLiteral("synonymsEdit"));
-        synonymsEdit->setGeometry(QRect(40, 190, 141, 20));
-        horizontalLayoutWidget = new QWidget(addwordwindow);
+        synonyms_edit = new QLineEdit(AddWordWindow);
+        synonyms_edit->setObjectName(QStringLiteral("synonyms_edit"));
+        synonyms_edit->setGeometry(QRect(40, 190, 141, 20));
+        horizontalLayoutWidget = new QWidget(AddWordWindow);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(170, 240, 191, 51));
+        horizontalLayoutWidget->setGeometry(QRect(190, 240, 191, 51));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        cancelButton = new QPushButton(horizontalLayoutWidget);
-        cancelButton->setObjectName(QStringLiteral("cancelButton"));
+        cancel_button = new QPushButton(horizontalLayoutWidget);
+        cancel_button->setObjectName(QStringLiteral("cancel_button"));
 
-        horizontalLayout->addWidget(cancelButton);
+        horizontalLayout->addWidget(cancel_button);
 
-        saveButton = new QPushButton(horizontalLayoutWidget);
-        saveButton->setObjectName(QStringLiteral("saveButton"));
+        save_button = new QPushButton(horizontalLayoutWidget);
+        save_button->setObjectName(QStringLiteral("save_button"));
 
-        horizontalLayout->addWidget(saveButton);
+        horizontalLayout->addWidget(save_button);
 
 
-        retranslateUi(addwordwindow);
+        retranslateUi(AddWordWindow);
 
-        QMetaObject::connectSlotsByName(addwordwindow);
+        QMetaObject::connectSlotsByName(AddWordWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *addwordwindow)
+    void retranslateUi(QDialog *AddWordWindow)
     {
-        addwordwindow->setWindowTitle(QApplication::translate("addwordwindow", "Dodaj s\305\202owo", 0));
-        label->setText(QApplication::translate("addwordwindow", "S\305\202\303\263wko", 0));
-        label_2->setText(QApplication::translate("addwordwindow", "Polskie znaczenie", 0));
-        label_3->setText(QApplication::translate("addwordwindow", "Przyk\305\202adowe zdanie", 0));
-        label_4->setText(QApplication::translate("addwordwindow", "Synonimy", 0));
-        cancelButton->setText(QApplication::translate("addwordwindow", "Anuluj", 0));
-        saveButton->setText(QApplication::translate("addwordwindow", "Zapisz", 0));
+        AddWordWindow->setWindowTitle(QApplication::translate("AddWordWindow", "Dodaj s\305\202owo", 0));
+        label->setText(QApplication::translate("AddWordWindow", "S\305\202\303\263wko", 0));
+        label_2->setText(QApplication::translate("AddWordWindow", "Polskie znaczenie", 0));
+        label_3->setText(QApplication::translate("AddWordWindow", "Przyk\305\202adowe zdanie", 0));
+        label_4->setText(QApplication::translate("AddWordWindow", "Synonimy", 0));
+        cancel_button->setText(QApplication::translate("AddWordWindow", "Anuluj", 0));
+        save_button->setText(QApplication::translate("AddWordWindow", "Zapisz", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class AddWordWindow: public Ui_addwordwindow {};
+    class AddWordWindow: public Ui_AddWordWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -26,7 +26,7 @@
     <string>Słówko</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="angWordEdit">
+  <widget class="QLineEdit" name="eng_word_edit">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -52,7 +52,7 @@
     <string>Polskie znaczenie</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="polWordEdit">
+  <widget class="QLineEdit" name="pol_word_edit">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -78,7 +78,7 @@
     <string>Przykładowe zdanie</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="sentenceEdit">
+  <widget class="QLineEdit" name="sentence_edit">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -104,7 +104,7 @@
     <string>Synonimy</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="synonymsEdit">
+  <widget class="QLineEdit" name="synonyms_edit">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -117,7 +117,7 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>190</x>
      <y>240</y>
      <width>191</width>
      <height>51</height>
@@ -125,14 +125,14 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="cancelButton">
+     <widget class="QPushButton" name="cancel_button">
       <property name="text">
        <string>Anuluj</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="saveButton">
+     <widget class="QPushButton" name="save_button">
       <property name="text">
        <string>Zapisz</string>
       </property>

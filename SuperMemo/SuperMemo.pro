@@ -1,8 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2015-04-12T16:06:27
-#
-#-------------------------------------------------
 
 QT       += core gui
 QT      += sql
@@ -13,19 +8,37 @@ TARGET = SuperMemo
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-    settings.cpp \
+SOURCES +=\
     AddWordWindow.cpp \
     LearnWindow.cpp \
-    MainWindow.cpp
+    MainWindow.cpp \
+    AbstractWord.cpp \
+    WordDecorator.cpp \
+    SimpleWord.cpp \
+    WordSentence.cpp \
+    WordSynonyms.cpp \
+    DatabaseFile.cpp \
+    main.cpp \
+    DataBaseWords.cpp \
+    CalendarWindow.cpp
 
 HEADERS  += \
-    settings.h \
     AddWordWindow.h \
     LearnWindow.h \
-    MainWindow.h
+    MainWindow.h \
+    AbstractWord.h \
+    WordDecorator.h \
+    SimpleWord.h \
+    WordSentence.h \
+    WordSynonyms.h \
+    DatabaseFile.h \
+    DataBaseWords.h \
+    CalendarWindow.h \
+    WordFactory.hpp
 
 FORMS    += \
     AddWordWindow.ui \
     LearnWindow.ui \
-    MainWindow.ui
+    MainWindow.ui \
+    DataBaseWords.ui \
+    CalendarWindow.ui
